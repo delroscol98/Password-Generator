@@ -28,7 +28,7 @@
         />
       </section>
 
-      <section class="passwordInput">
+      <form class="passwordInput">
         <section class="characterLength">
           <section class="characterLength__container">
             <label
@@ -47,7 +47,54 @@
             value="0"
           />
         </section>
-      </section>
+
+        <section class="checkboxInclude">
+          <article class="checkboxInclude__container">
+            <input
+              class="checkboxInclude__checkbox"
+              type="checkbox"
+              name="uppercase"
+              id="uppercase"
+            />
+            <label class="checkboxInclude__label paragraph" for="uppercase"
+              >Include Uppercase Letters</label
+            >
+          </article>
+          <article class="checkboxInclude__container">
+            <input
+              class="checkboxInclude__checkbox"
+              type="checkbox"
+              name="lowercase"
+              id="lowercase"
+            />
+            <label class="checkboxInclude__label paragraph" for="lowercase"
+              >Include Lowercase Letters</label
+            >
+          </article>
+          <article class="checkboxInclude__container">
+            <input
+              class="checkboxInclude__checkbox"
+              type="checkbox"
+              name="numbers"
+              id="numbers"
+            />
+            <label class="checkboxInclude__label paragraph" for="numbers"
+              >Include Numbers</label
+            >
+          </article>
+          <article class="checkboxInclude__container">
+            <input
+              class="checkboxInclude__checkbox"
+              type="checkbox"
+              name="symbols"
+              id="symbols"
+            />
+            <label class="checkboxInclude__label paragraph" for="symbols"
+              >Include Symbols</label
+            >
+          </article>
+        </section>
+      </form>
     </main>
   </body>
 </html>

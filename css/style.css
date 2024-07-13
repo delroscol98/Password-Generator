@@ -42,6 +42,54 @@ html {
   font-size: 1.8rem;
   line-height: calc(23 / 18); }
 
+.characterLength {
+  display: grid;
+  gap: 1.8rem; }
+  .characterLength__container {
+    display: flex;
+    justify-content: space-between; }
+  .characterLength__label {
+    color: #e6e5ea; }
+  .characterLength__number {
+    color: #a4ffaf; }
+  .characterLength__range {
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    height: 0.8rem;
+    background-color: #18171f; }
+    .characterLength__range::-webkit-slider-thumb {
+      appearance: none;
+      height: 2.8rem;
+      width: 2.8rem;
+      background-color: #e6e5ea;
+      border-radius: 50%; }
+
+.checkboxInclude {
+  margin: 4.2rem 0 3.2rem 0;
+  display: grid;
+  gap: 1.6rem; }
+  .checkboxInclude__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem; }
+  .checkboxInclude__checkbox {
+    appearance: none;
+    font: inherit;
+    color: currentColor;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #e6e5ea; }
+    .checkboxInclude__checkbox:checked {
+      background-image: url(../../starter-code/assets/images/icon-check.svg);
+      background-size: cover;
+      background-position: center;
+      background-color: #a4ffaf;
+      border: none; }
+  .checkboxInclude__label {
+    color: #e6e5ea; }
+
 .passwordDisplay {
   background-color: #24232c;
   padding: 1.6rem;
@@ -58,31 +106,3 @@ html {
 .passwordInput {
   background-color: #24232c;
   padding: 1.6rem; }
-
-.characterLength {
-  display: grid;
-  gap: 1.8rem; }
-
-.characterLength__container {
-  display: flex;
-  justify-content: space-between; }
-
-.characterLength__label {
-  color: #e6e5ea; }
-
-.characterLength__number {
-  color: #a4ffaf; }
-
-.characterLength__range {
-  appearance: none;
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  height: 0.8rem;
-  background-color: #18171f; }
-  .characterLength__range::-webkit-slider-thumb {
-    appearance: none;
-    height: 2.8rem;
-    width: 2.8rem;
-    background-color: #e6e5ea;
-    border-radius: 50%; }
