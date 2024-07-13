@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  Password Generator
+    <title>Frontend Mentor | Password generator app</title>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Password Generator</h1>
 
-  P4$5W0rD!
+      <section class="passwordDisplay">
+        <h2 class="heading-2 passwordDisplay__password">PTx1f5DaFX</h2>
+        <img
+          class="passwordDisplay__copy"
+          src="./starter-code/assets/images/icon-copy.svg"
+          alt="copy icon"
+        />
+      </section>
 
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
-</body>
+      <section class="passwordInput">
+        <section class="characterLength">
+          <section class="characterLength__container">
+            <label
+              class="paragraph characterLength__label"
+              for="characterLength__range"
+              >Character Length</label
+            >
+            <p class="paragraph characterLength__number">0</p>
+          </section>
+          <input
+            class="characterLength__range"
+            type="range"
+            min="0"
+            max="20"
+            step="1"
+            value="0"
+          />
+        </section>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 html {
+  font-family: "JetBrains Mono", monospace;
   font-size: 62.5%;
+  font-weight: bold;
 
   @media screen and (max-width: 23.4em) {
     font-size: 50%;

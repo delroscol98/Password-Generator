@@ -8,10 +8,24 @@
 
 body {
   min-height: 100vh;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #08070b; }
+
+main {
+  display: grid;
+  gap: 1.6rem;
+  margin: 6.4rem auto;
+  width: calc(min(calc(343 / 375 * 100%), 54rem)); }
+
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #817d92; }
 
 html {
-  font-size: 62.5%; }
+  font-family: "JetBrains Mono", monospace;
+  font-size: 62.5%;
+  font-weight: bold; }
   @media screen and (max-width: 23.4em) {
     html {
       font-size: 50%; } }
@@ -27,3 +41,48 @@ html {
 .paragraph {
   font-size: 1.8rem;
   line-height: calc(23 / 18); }
+
+.passwordDisplay {
+  background-color: #24232c;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.passwordDisplay__password {
+  color: #e6e5ea; }
+
+.passwordDisplay__copy {
+  height: 2rem; }
+
+.passwordInput {
+  background-color: #24232c;
+  padding: 1.6rem; }
+
+.characterLength {
+  display: grid;
+  gap: 1.8rem; }
+
+.characterLength__container {
+  display: flex;
+  justify-content: space-between; }
+
+.characterLength__label {
+  color: #e6e5ea; }
+
+.characterLength__number {
+  color: #a4ffaf; }
+
+.characterLength__range {
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  height: 0.8rem;
+  background-color: #18171f; }
+  .characterLength__range::-webkit-slider-thumb {
+    appearance: none;
+    height: 2.8rem;
+    width: 2.8rem;
+    background-color: #e6e5ea;
+    border-radius: 50%; }

@@ -9,4 +9,18 @@
 body {
   min-height: 100vh;
   box-sizing: border-box;
+  background-color: #08070b;
+}
+
+main {
+  display: grid;
+  gap: 1.6rem;
+  margin: 6.4rem auto;
+  width: calc(min(calc(343 / 375 * 100%), 54rem));
+}
+
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: $color-gray;
 }
