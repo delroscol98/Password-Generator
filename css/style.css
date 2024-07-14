@@ -138,6 +138,22 @@ html {
       width: 1rem;
       border: 2px solid #e6e5ea; }
 
+.too-weak {
+  background-color: #f64a4a;
+  border: none; }
+
+.weak {
+  background-color: #fb7c58;
+  border: none; }
+
+.medium {
+  background-color: #f8cd65;
+  border: none; }
+
+.strong {
+  background-color: #a4ffaf;
+  border: none; }
+
 .passwordDisplay {
   background-color: #24232c;
   padding: 1.6rem;

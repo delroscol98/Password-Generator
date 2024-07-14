@@ -43,10 +43,35 @@ const generatePassword = () => {
   //Creates character code array based on user input
   let charCodes = [];
   const passwordCharacters = [];
-  if (includeUpper) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
-  if (includeLower) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES);
-  if (includeNums) charCodes = charCodes.concat(NUMBER_CHAR_CODES);
-  if (includeSym) charCodes = charCodes.concat(SYMBOL_CHAR_CODES);
+  let strengthCount = 0;
+  if (includeUpper) {
+    charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
+    strengthCount++;
+    if (!includeUpper) {
+      strengthCount--;
+    }
+  }
+  if (includeLower) {
+    charCodes = charCodes.concat(LOWERCASE_CHAR_CODES);
+    strengthCount++;
+    if (!includeLower) {
+      strengthCount--;
+    }
+  }
+  if (includeNums) {
+    charCodes = charCodes.concat(NUMBER_CHAR_CODES);
+    strengthCount++;
+    if (!includeNums) {
+      strengthCount--;
+    }
+  }
+  if (includeSym) {
+    charCodes = charCodes.concat(SYMBOL_CHAR_CODES);
+    strengthCount++;
+    if (!includeSym) {
+      strengthCount--;
+    }
+  }
 
   //Loops through character code array and produces a random selection of characters to create and return a password as a string
   for (let i = 0; i < charLength; i++) {
@@ -54,7 +79,33 @@ const generatePassword = () => {
       charCodes[Math.floor(Math.random() * charCodes.length)];
     passwordCharacters.push(String.fromCharCode(characterCode));
   }
-  return passwordCharacters.join("");
+  return [passwordCharacters.join(""), strengthCount];
+};
+
+const ratingBarHandler = (strengthCount) => {
+  const ratingBars = document.querySelectorAll(".strength__rating--bar");
+  const ratingLabel = document.querySelector(".strength__rating-label");
+
+  console.log(ratingBars);
+
+  for (let i = 0; i < strengthCount; i++) {
+    if (strengthCount === 1) {
+      ratingBars[i].classList.add("too-weak");
+      ratingLabel.innerText = "TOO WEAK";
+    }
+    if (strengthCount === 2) {
+      ratingBars[i].classList.add("weak");
+      ratingLabel.innerText = "WEAK";
+    }
+    if (strengthCount === 3) {
+      ratingBars[i].classList.add("medium");
+      ratingLabel.innerText = "MEDIUM";
+    }
+    if (strengthCount === 4) {
+      ratingBars[i].classList.add("strong");
+      ratingLabel.innerText = "STRONG";
+    }
+  }
 };
 
 const formSubmitHandler = (e) => {
@@ -62,9 +113,12 @@ const formSubmitHandler = (e) => {
 
   //Generates a password
   const passwordEl = document.querySelector(".passwordDisplay__password");
-  const password = generatePassword();
+  const [password, strengthCount] = generatePassword();
 
-  passwordEl.innerText = password;
+  if (password) {
+    passwordEl.innerText = password;
+    ratingBarHandler(strengthCount);
+  }
 };
 
 passwordInputForm.addEventListener("submit", formSubmitHandler);
