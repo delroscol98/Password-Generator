@@ -1,0 +1,25 @@
+.button {
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  width: 100%;
+  height: 5.6rem;
+  background-color: $color-lime;
+  margin-top: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &__icon {
+    color: $color-black;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid $color-lime;
+    color: $color-lime;
+  }
+
+  &:hover &__icon {
+    fill: $color-lime;
+  }
+}

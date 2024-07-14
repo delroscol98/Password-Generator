@@ -29,6 +29,12 @@
       width: 2.8rem;
       background-color: $color-white;
       border-radius: 50%;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $color-black;
+        border: 2px solid $color-lime;
+      }
     }
   }
 }

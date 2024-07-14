@@ -18,6 +18,10 @@
     border: 2px solid $color-white;
     transition: all 0.2s;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:checked {
       background-image: url(../../starter-code/assets/images/icon-check.svg);
       background-size: auto;

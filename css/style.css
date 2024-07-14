@@ -42,6 +42,25 @@ html {
   font-size: 1.8rem;
   line-height: calc(23 / 18); }
 
+.button {
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  width: 100%;
+  height: 5.6rem;
+  background-color: #a4ffaf;
+  margin-top: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .button__icon {
+    color: #18171f; }
+  .button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #a4ffaf;
+    color: #a4ffaf; }
+  .button:hover .button__icon {
+    fill: #a4ffaf; }
+
 .characterLength {
   display: grid;
   gap: 1.8rem; }
@@ -64,7 +83,11 @@ html {
       height: 2.8rem;
       width: 2.8rem;
       background-color: #e6e5ea;
-      border-radius: 50%; }
+      border-radius: 50%;
+      transition: all 0.2s; }
+      .characterLength__range::-webkit-slider-thumb:hover {
+        background-color: #18171f;
+        border: 2px solid #a4ffaf; }
 
 .checkboxInclude {
   margin: 4.2rem 0 3.2rem 0;
@@ -82,6 +105,8 @@ html {
     height: 2rem;
     border: 2px solid #e6e5ea;
     transition: all 0.2s; }
+    .checkboxInclude__checkbox:hover {
+      cursor: pointer; }
     .checkboxInclude__checkbox:checked {
       background-image: url(../../starter-code/assets/images/icon-check.svg);
       background-size: auto;
@@ -119,12 +144,21 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-
-.passwordDisplay__password {
-  color: #e6e5ea; }
-
-.passwordDisplay__copy {
-  height: 2rem; }
+  .passwordDisplay__password {
+    color: #e6e5ea; }
+  .passwordDisplay__copy {
+    fill: #a4ffaf;
+    transition: all 0.2s; }
+  .passwordDisplay__copy-button {
+    height: 3rem;
+    border: none;
+    background-color: transparent; }
+    .passwordDisplay__copy-button > svg {
+      height: 3rem; }
+    .passwordDisplay__copy-button:hover {
+      cursor: pointer; }
+    .passwordDisplay__copy-button:hover .passwordDisplay__copy {
+      fill: #e6e5ea; }
 
 .passwordInput {
   background-color: #24232c;
