@@ -27,3 +27,23 @@
     }
   }
 }
+
+.too-weak {
+  background-color: $color-red;
+  border: none;
+}
+
+.weak {
+  background-color: $color-orange;
+  border: none;
+}
+
+.medium {
+  background-color: $color-yello;
+  border: none;
+}
+
+.strong {
+  background-color: $color-lime;
+  border: none;
+}
