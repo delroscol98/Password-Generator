@@ -80,15 +80,38 @@ html {
     color: currentColor;
     width: 2rem;
     height: 2rem;
-    border: 2px solid #e6e5ea; }
+    border: 2px solid #e6e5ea;
+    transition: all 0.2s; }
     .checkboxInclude__checkbox:checked {
       background-image: url(../../starter-code/assets/images/icon-check.svg);
-      background-size: cover;
+      background-size: auto;
+      background-repeat: no-repeat;
       background-position: center;
       background-color: #a4ffaf;
       border: none; }
   .checkboxInclude__label {
     color: #e6e5ea; }
+
+.strength {
+  padding: 1.6rem;
+  background-color: #18171f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .strength__heading {
+    color: #817d92; }
+  .strength__rating-container {
+    display: flex;
+    gap: 1.6rem; }
+  .strength__rating-label {
+    color: #e6e5ea; }
+  .strength__rating {
+    display: flex;
+    gap: 0.8rem; }
+    .strength__rating--bar {
+      height: 100%;
+      width: 1rem;
+      border: 2px solid #e6e5ea; }
 
 .passwordDisplay {
   background-color: #24232c;

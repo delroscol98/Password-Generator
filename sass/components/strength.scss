@@ -1,0 +1,29 @@
+.strength {
+  padding: 1.6rem;
+  background-color: $color-black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__heading {
+    color: $color-gray;
+  }
+
+  &__rating-container {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__rating-label {
+    color: $color-white;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 0.8rem;
+    &--bar {
+      height: 100%;
+      width: 1rem;
+      border: 2px solid $color-white;
+    }
+  }
+}

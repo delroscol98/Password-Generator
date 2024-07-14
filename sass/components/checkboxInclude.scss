@@ -16,10 +16,12 @@
     width: 2rem;
     height: 2rem;
     border: 2px solid $color-white;
+    transition: all 0.2s;
 
     &:checked {
       background-image: url(../../starter-code/assets/images/icon-check.svg);
-      background-size: cover;
+      background-size: auto;
+      background-repeat: no-repeat;
       background-position: center;
       background-color: $color-lime;
       border: none;
