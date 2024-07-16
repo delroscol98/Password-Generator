@@ -87,22 +87,28 @@ const generatePassword = () => {
 };
 
 const ratingBarHandler = (strengthCount) => {
-  for (let i = 0; i < strengthCount; i++) {
-    if (strengthCount === 1) {
-      ratingBars[i].classList.add("too-weak");
-      ratingLabel.innerText = "TOO WEAK";
-    }
-    if (strengthCount === 2) {
-      ratingBars[i].classList.add("weak");
-      ratingLabel.innerText = "WEAK";
-    }
-    if (strengthCount === 3) {
-      ratingBars[i].classList.add("medium");
-      ratingLabel.innerText = "MEDIUM";
-    }
-    if (strengthCount === 4) {
-      ratingBars[i].classList.add("strong");
-      ratingLabel.innerText = "STRONG";
+  for (let i = 0; i < ratingBars.length; i++) {
+    ratingBars[i].classList.remove("too-weak");
+    ratingBars[i].classList.remove("weak");
+    ratingBars[i].classList.remove("medium");
+    ratingBars[i].classList.remove("strong");
+    for (let j = 0; j < strengthCount; j++) {
+      if (strengthCount === 1) {
+        ratingBars[j].classList.add("too-weak");
+        ratingLabel.innerText = "TOO WEAK";
+      }
+      if (strengthCount === 2) {
+        ratingBars[j].classList.add("weak");
+        ratingLabel.innerText = "WEAK";
+      }
+      if (strengthCount === 3) {
+        ratingBars[j].classList.add("medium");
+        ratingLabel.innerText = "MEDIUM";
+      }
+      if (strengthCount === 4) {
+        ratingBars[j].classList.add("strong");
+        ratingLabel.innerText = "STRONG";
+      }
     }
   }
 };
