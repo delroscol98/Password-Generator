@@ -51,6 +51,8 @@ const generatePassword = () => {
   if (includeUpper) {
     charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
     strengthCount++;
+    if (charLength < 5) strengthCount = 1;
+    if (charLength >= 5 && charLength <= 9) strengthCount = 2;
     if (!includeUpper) {
       strengthCount--;
     }
@@ -58,6 +60,8 @@ const generatePassword = () => {
   if (includeLower) {
     charCodes = charCodes.concat(LOWERCASE_CHAR_CODES);
     strengthCount++;
+    if (charLength < 5) strengthCount = 1;
+    if (charLength >= 5 && charLength <= 9) strengthCount = 2;
     if (!includeLower) {
       strengthCount--;
     }
@@ -65,6 +69,8 @@ const generatePassword = () => {
   if (includeNums) {
     charCodes = charCodes.concat(NUMBER_CHAR_CODES);
     strengthCount++;
+    if (charLength < 5) strengthCount = 1;
+    if (charLength >= 5 && charLength <= 9) strengthCount = 2;
     if (!includeNums) {
       strengthCount--;
     }
@@ -72,6 +78,8 @@ const generatePassword = () => {
   if (includeSym) {
     charCodes = charCodes.concat(SYMBOL_CHAR_CODES);
     strengthCount++;
+    if (charLength < 5) strengthCount = 1;
+    if (charLength >= 5 && charLength <= 9) strengthCount = 2;
     if (!includeSym) {
       strengthCount--;
     }
