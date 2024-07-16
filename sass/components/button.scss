@@ -8,6 +8,10 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  @media screen and (min-width: 48em) {
+    margin-top: 3.2rem;
+  }
+
   &__icon {
     color: $color-black;
   }

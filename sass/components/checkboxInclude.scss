@@ -3,10 +3,18 @@
   display: grid;
   gap: 1.6rem;
 
+  @media screen and (min-width: 48em) {
+    gap: 2rem;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @media screen and (min-width: 48em) {
+      gap: 2.4rem;
+    }
   }
 
   &__checkbox {
@@ -20,6 +28,7 @@
 
     &:hover {
       cursor: pointer;
+      border: 2px solid $color-lime;
     }
 
     &:checked {

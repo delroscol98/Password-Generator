@@ -17,6 +17,11 @@ main {
   gap: 1.6rem;
   margin: 6.4rem auto;
   width: calc(min(calc(343 / 375 * 100%), 54rem));
+
+  @media screen and (min-width: 48em) {
+    margin: 13.3rem auto;
+    gap: 3.1rem;
+  }
 }
 
 h1 {

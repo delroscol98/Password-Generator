@@ -16,6 +16,10 @@ main {
   gap: 1.6rem;
   margin: 6.4rem auto;
   width: calc(min(calc(343 / 375 * 100%), 54rem)); }
+  @media screen and (min-width: 48em) {
+    main {
+      margin: 13.3rem auto;
+      gap: 3.1rem; } }
 
 h1 {
   font-size: 1.6rem;
@@ -51,6 +55,9 @@ html {
   margin-top: 1.6rem;
   cursor: pointer;
   transition: all 0.2s; }
+  @media screen and (min-width: 48em) {
+    .button {
+      margin-top: 3.2rem; } }
   .button__icon {
     color: #18171f; }
   .button:hover {
@@ -93,10 +100,16 @@ html {
   margin: 4.2rem 0 3.2rem 0;
   display: grid;
   gap: 1.6rem; }
+  @media screen and (min-width: 48em) {
+    .checkboxInclude {
+      gap: 2rem; } }
   .checkboxInclude__container {
     display: flex;
     align-items: center;
     gap: 2rem; }
+    @media screen and (min-width: 48em) {
+      .checkboxInclude__container {
+        gap: 2.4rem; } }
   .checkboxInclude__checkbox {
     appearance: none;
     font: inherit;
@@ -106,7 +119,8 @@ html {
     border: 2px solid #e6e5ea;
     transition: all 0.2s; }
     .checkboxInclude__checkbox:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      border: 2px solid #a4ffaf; }
     .checkboxInclude__checkbox:checked {
       background-image: url(../../starter-code/assets/images/icon-check.svg);
       background-size: auto;
@@ -161,7 +175,7 @@ html {
   justify-content: space-between;
   align-items: center; }
   .passwordDisplay__password {
-    color: #e6e5ea; }
+    color: #817d92; }
   .passwordDisplay__container {
     display: flex;
     align-items: center;

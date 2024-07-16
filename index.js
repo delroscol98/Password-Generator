@@ -115,6 +115,7 @@ const formSubmitHandler = (e) => {
 
   if (password) {
     passwordEl.innerText = password;
+    passwordEl.style.color = "#e6e5ea";
     ratingBarHandler(strengthCount);
   }
 };
