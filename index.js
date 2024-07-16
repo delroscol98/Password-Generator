@@ -1,6 +1,12 @@
-//CHARACTER LENGTH SLIDER
 const rangeInput = document.querySelector(".characterLength__range");
 const rangeNumber = document.querySelector(".characterLength__number");
+const passwordInputForm = document.querySelector(".passwordInput");
+const ratingBars = document.querySelectorAll(".strength__rating--bar");
+const ratingLabel = document.querySelector(".strength__rating-label");
+const passwordEl = document.querySelector(".passwordDisplay__password");
+const copyBtn = document.querySelector(".passwordDisplay__copy-button");
+
+//CHARACTER LENGTH SLIDER
 
 const rangeInputHandler = () => {
   const charLength = rangeInput.value;
@@ -13,8 +19,6 @@ const rangeInputHandler = () => {
 rangeInput.addEventListener("input", rangeInputHandler);
 
 //GENERATE PASSWORD
-const passwordInputForm = document.querySelector(".passwordInput");
-
 //Creates ASCII CharacterCode Array
 const ASCIICharCodeArray = (low, high) => {
   const ASCIIArray = [];
@@ -83,11 +87,6 @@ const generatePassword = () => {
 };
 
 const ratingBarHandler = (strengthCount) => {
-  const ratingBars = document.querySelectorAll(".strength__rating--bar");
-  const ratingLabel = document.querySelector(".strength__rating-label");
-
-  console.log(ratingBars);
-
   for (let i = 0; i < strengthCount; i++) {
     if (strengthCount === 1) {
       ratingBars[i].classList.add("too-weak");
@@ -112,7 +111,6 @@ const formSubmitHandler = (e) => {
   e.preventDefault();
 
   //Generates a password
-  const passwordEl = document.querySelector(".passwordDisplay__password");
   const [password, strengthCount] = generatePassword();
 
   if (password) {
@@ -122,3 +120,20 @@ const formSubmitHandler = (e) => {
 };
 
 passwordInputForm.addEventListener("submit", formSubmitHandler);
+
+//COPY PASSWORD
+const copyHandler = async () => {
+  const passwordText = passwordEl.innerText;
+  const passwordMessage = document.querySelector(".passwordDisplay__message");
+
+  try {
+    await navigator.clipboard.writeText(passwordText);
+    passwordMessage.style.opacity = 1;
+    passwordMessage.style.transform = "translateY(0px)";
+    console.log("Content copied to clipboard: " + passwordText);
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
+};
+
+copyBtn.addEventListener("click", copyHandler);

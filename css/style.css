@@ -162,6 +162,15 @@ html {
   align-items: center; }
   .passwordDisplay__password {
     color: #e6e5ea; }
+  .passwordDisplay__container {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem; }
+  .passwordDisplay__message {
+    color: #a4ffaf;
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: all 0.2s; }
   .passwordDisplay__copy {
     fill: #a4ffaf;
     transition: all 0.2s; }
